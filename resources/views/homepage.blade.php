@@ -18,16 +18,26 @@
 <body>
 
     <main>
-        @foreach ($movies as $movie)
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                @foreach ($movies as $movie)
+
+                    <div class="card col-2 p-3 m-3">
+                        <ul>
+                            <li>Titolo: {{$movie->title}}</li>
+                            <li>Titolo originale: {{$movie->original_title}}</li>
+                            <li>Nazionalità: {{$movie->nationality}}</li>
+                            <li>Uscita: {{$movie->date}}</li>
+                            <li>Voto: {{$movie->vote}}</li>
+                        </ul>
+                    </div>
+                    
+                @endforeach
+            </div>
+        </div>
+
             
-                <ul>
-                    <li>Titolo: {{$movie->title}}</li>
-                    <li>Titolo originale: {{$movie->original_title}}</li>
-                    <li>Nazionalità: {{$movie->nationality}}</li>
-                    <li>Uscita: {{$movie->date}}</li>
-                    <li>Voto: {{$movie->vote}}</li>
-                </ul>
-        @endforeach
+        
     </main>
 
 </body>
